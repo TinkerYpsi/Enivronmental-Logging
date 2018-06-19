@@ -1,4 +1,6 @@
 # Enivronmental Logging
+Written by *Patrick Neggie*, 2018 <<patmn@umich.edu>>
+
 Log sunlight, soil moisture, humidity, and temperature to an SD card using an AM2302 humidity/temperature sensor, a BH1603FVC analog ambient light sensor, an analog soil moisture sensor, and a microSD card reader module.
 
 ## Libraries
