@@ -23,4 +23,4 @@ You can find tutorials for some of the hardware used in this set up:
 [sdcard-tutorial]:"https://docs.google.com/document/d/11fd5CjdSFBCdqqH4awOgLhqdfO8_vMDFwVs2HG7NDc0/edit?usp=sharing"
 [am2302-tutorial]:"https://docs.google.com/document/d/1Tqajr00DiD7vihQLtlmfYF8WjfIM4vp-AH7fxCeKd8k/edit?usp=sharing"
 [soil-tutorial]:""
-[light-sensor-tutorial]:"https://github.com/TinkerYpsi/TT_RFID_Simple_Access_Control/archive/master.zip"
+[light-sensor-tutorial]:"github.com/TinkerYpsi/TT_RFID_Simple_Access_Control/archive/master.zip"
