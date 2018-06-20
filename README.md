@@ -17,10 +17,10 @@ You can find tutorials for some of the hardware used in this set up:
 * [Ambient light sensor tutorial][light-sensor-tutorial]
 
 
-[time-lib-zip]:"github.com/PaulStoffregen/Time/archive/master.zip"
-[TTLog-zip]:"github.com/TinkerYpsi/TTLog/archive/master.zip"
-[humidity-sensor-zip]:"static.cactus.io/downloads/library/am2302/cactus_io_AM2302.zip"
-[sdcard-tutorial]:"docs.google.com/document/d/11fd5CjdSFBCdqqH4awOgLhqdfO8_vMDFwVs2HG7NDc0/edit?usp=sharing"
-[am2302-tutorial]:"docs.google.com/document/d/1Tqajr00DiD7vihQLtlmfYF8WjfIM4vp-AH7fxCeKd8k/edit?usp=sharing"
+[time-lib-zip]:https://github.com/PaulStoffregen/Time/archive/master.zip
+[TTLog-zip]:https://github.com/TinkerYpsi/TTLog/archive/master.zip
+[humidity-sensor-zip]:http://static.cactus.io/downloads/library/am2302/cactus_io_AM2302.zip
+[sdcard-tutorial]:https://docs.google.com/document/d/11fd5CjdSFBCdqqH4awOgLhqdfO8_vMDFwVs2HG7NDc0/edit?usp=sharing
+[am2302-tutorial]:https://docs.google.com/document/d/1Tqajr00DiD7vihQLtlmfYF8WjfIM4vp-AH7fxCeKd8k/edit?usp=sharing
 [soil-tutorial]:""
 [light-sensor-tutorial]:""
