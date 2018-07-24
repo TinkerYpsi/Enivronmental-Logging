@@ -1,9 +1,9 @@
 #include <TT_Log.h>
 #include <cactus_io_AM2302.h>
 
-const int soilMoisturePin = A1;
+const int soilMoisturePin = A6;
 const int luxDetectorPin = A2;
-const int humiditySensorPin = 3;
+const int humiditySensorPin = A4;
 const int gc1Pin = 5;
 const int gc2Pin = 6;
 int gc1PinVal = 0;
