@@ -6,6 +6,7 @@ const int luxDetectorPin = A2;
 const int humiditySensorPin = A4;
 const int gc1Pin = 5;
 const int gc2Pin = 6;
+const int batteryPin = A1;
 int gc1PinVal = 0;
 int gc2PinVal = 0;
 int lux = 0;
@@ -25,12 +26,20 @@ void setup()
   while(!Serial);
   Log.begin();
   Log.setDateTime();
-  String header = "Humidity,Temperature,Light,Moisture";
-  Log.entryHeaderCSV(header, filename);
+  String header = "Humidity,Temperature,Light,Moisture,Time,Month,Day,Year";
+  Log.entryHeaderCSV(header, filename, false);
 }
 
 void loop()
 {
+  String serial_header = "Battery  Humidity  Temp  Light  Moisture  Time    Date";
+  Serial.println(serial_header);
+
+  float batteryLeft = analogRead(batteryPin);
+  batteryLeft = (batteryLeft / 1023) * 5;
+  Serial.print(batteryLeft);
+  Serial.print("V");
+  
   humidityDetector.readHumidity();
   humidityDetector.readTemperature();
 
@@ -42,29 +51,53 @@ void loop()
 
   message += humidityDetector.humidity;
   message += ",";
+  Serial.print("    ");
+  Serial.print(humidityDetector.humidity);
   message += humidityDetector.temperature_F;
   message += ",";
+  Serial.print("     ");
+  Serial.print(humidityDetector.temperature_F);
 
   int lux = detectLux(gc1Pin, gc2Pin, luxDetectorPin);
   message += String(lux);
   message += ",";
+  Serial.print("  ");
+  Serial.print(lux);
 
   moisture = analogRead(soilMoisturePin);
   if(moisture > 700)
   {
     message += "Damp,";
+    Serial.print("    Damp");
   }
   else if(moisture > 400)
   {
     message += "Average,";
+    Serial.print("    Average");
   }
   else
   {
     message += "Dry,";
+    Serial.print("    Dry");
   }
 
-  Log.entryCSV(message, filename);
+  Log.entryCSV(message, filename, false);
   message = "";
+  
+  String Time;
+  Log.appendTimeTXT(Time);
+  Serial.print("      ");
+  Serial.print(Time);
+
+
+  String Date;
+  Log.appendDateTXT(Date);
+  Serial.print("  ");
+  Serial.print(Date);
+  
+  Serial.println();
+  Serial.println();
+  
   delay(5000);
 }
 
